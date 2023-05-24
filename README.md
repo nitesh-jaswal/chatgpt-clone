@@ -1,2 +1,2 @@
-# chatgpt-clone
+# Chatgpt Clone
 A Django based ChatGPT clone

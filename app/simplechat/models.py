@@ -1,8 +1,10 @@
 import uuid
 from django.db import models
 
+# Roles
+# Name(optional)
 class Question(models.Model):
-    id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
+    id = models.AutoField(primary_key = True, editable = False)
     question_text = models.CharField(max_length=500)
 
     def __str__(self) -> str:

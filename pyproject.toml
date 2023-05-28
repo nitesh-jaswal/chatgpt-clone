@@ -10,6 +10,7 @@ packages = [{include = "chatgpt_clone"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 django = "^4.2.1"
+tiktoken = "^0.4.0"
 
 
 [tool.poetry.group.dev.dependencies]

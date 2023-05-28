@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form>
+    <form method="post" action="{% url 'simplechat:get_answer' %}">
+        {% csrf_token %}
         <label for="question">Question:</label><br>
-        <input type="text" id="question" name="question"><br>
-        <label for="answer">Answer:</label><br>
-        <textarea id="answer" name="answer" rows="10" cols="30" readonly></textarea>
+        <textarea id="question" name="question" rows="10" cols="30" >{{ question }}</textarea>
         <button type="submit" name="get_answer" value="get_answer">Get Answer</button>
     </form>
+    <h3>Answer:</h3><br>
+    <div>
+        <textarea id="answer" rows="10" cols="30" readonly style="resize: both; overflow: auto;">{{ answer }}</textarea>
+    </div>
 {% endblock %}

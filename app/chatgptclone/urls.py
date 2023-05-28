@@ -18,10 +18,13 @@ from django.contrib import admin
 from django.urls import include, path
 
 from . import views
+from django.urls import include, path
+
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("chat/", include("simplechat.urls")),
+    path("chat/", include("simplechat.urls"), name="simplechat"),
     path("say_hello/", views.say_hello, name="say_hello" ),
     path("", views.say_hello, name="home" ),
 ]
